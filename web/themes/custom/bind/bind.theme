@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * @file
+ * bind theme file.
+ */
+
+function bind_preprocess_image(&$variables) {
+  unset($variables['attributes']['loading']);
+}

@@ -1,0 +1,8 @@
+name: 'bind_tweaks'
+type: module
+description: 'Binding tweaks'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Custom'
+dependencies:
+  - webform

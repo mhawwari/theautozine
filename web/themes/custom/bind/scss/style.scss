@@ -1,0 +1,288 @@
+// Include custom sub theme.
+@import 'custom/variables';
+//@import 'custom/mixins/misc';
+//@import 'custom/misc';
+
+// Include bootstrap variables definitions overrides.
+@import 'overrides/variables';
+
+// Include parent theme with all things Bootstrap for full override.
+// Relative path to this styles.scss file.
+// Example: @import "../../../../../themes/contrib/bootstrap4/scss/style";
+@import "../../../../themes/contrib/bootstrap4/scss/style";
+// OR to go back to Bootstrap 4.4.1
+//@import "[DOCROOT]/themes/contrib/bootstrap4/scss/style-4-4";
+
+// .node--type-books {
+//   min-height: 100vh;
+// }
+body {
+  text-transform: lowercase;
+  color: #000;
+}
+
+.site-logo {
+  img {
+    height: 150px;
+
+    @include media-breakpoint-down(md) {
+      height: 80px;
+    }
+  }
+}
+
+.node--type-books {
+
+  .title-container {
+    text-align: center;
+    font-size: $h1-font-size;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .field--name-field-images {
+    .field__item:not(.📖-continues) {
+      min-height: 411px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.📖-view-preview {
+  .📖-zoom-content {
+    .📖-spread-wrapper {
+      &:first-child {
+        .region-content {
+          align-self: flex-start;
+        }
+
+        .📖-right {
+          background: #000;
+        }
+      }
+    }
+  }
+}
+
+.📖-spread-size {
+  .📖-page3d {
+    &:first-child {
+      .📖-page3d-front {
+        background: #000;
+      }
+    }
+  }
+}
+
+.📖-flow-box {
+  display: flex;
+  align-items: center;
+}
+
+.📖-view-print {
+  .📖-zoom-content {
+    .📖-print-sheet {
+      &:first-child {
+        .📖-right {
+          background: #000;
+        }
+      }
+    }
+  }
+}
+
+.page-title {
+  display: inline-block;
+  margin: 5rem 56px;
+  position: relative;
+
+  h1 {
+    background: #fff;
+    font-size: 1rem;
+    border: 3px solid #000;
+    transform: perspective(400px) rotateY(17deg) skew(0deg, -8deg);
+    padding: 1rem;
+    margin: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    transform: perspective(400px) rotateY(17deg) skew(0deg, -8deg);
+    border: 3px solid #000;
+
+    &:first-child {
+      top:    -56px;
+      left:   -56px;
+      right:  56px;
+      bottom: 56px;
+    }
+    &:nth-child(2) {
+      top:    -48px;
+      left:   -48px;
+      right:  48px;
+      bottom: 48px;
+    }
+    &:nth-child(3) {
+      top:    -40px;
+      left:   -40px;
+      right:  40px;
+      bottom: 40px;
+    }
+    &:nth-child(4) {
+      top:    -32px;
+      left:   -32px;
+      right:  32px;
+      bottom: 32px;
+    }
+    &:nth-child(5) {
+      top:    -24px;
+      left:   -24px;
+      right:  24px;
+      bottom: 24px;
+    }
+    &:nth-child(6) {
+      top:    -16px;
+      left:   -16px;
+      right:  16px;
+      bottom: 16px;
+    }
+    &:nth-child(7) {
+      top:    -8px;
+      left:   -8px;
+      right:  8px;
+      bottom: 8px;
+    }
+  }
+}
+
+.block-views-blockbooks-block-1,
+.view-display-id-publications_page {
+  margin-bottom: 100px;
+
+  h2 {
+    text-align: center;
+  }
+
+  .views-row {
+    @include media-breakpoint-down(md) {
+      justify-content: space-around;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .views-field-title {
+    width: 100%;
+
+    a {
+      padding: 1rem;
+      display: block;
+      text-transform: uppercase;
+      font-size: 12px;
+      width: 100%;
+      height: 212px;
+      background: #000;
+      color: #000;
+
+      @include media-breakpoint-down(md) {
+        color: #fff;
+      }
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-link {
+  padding: 0;
+}
+
+.form-control {
+    border-radius: 0;
+    color: $black;
+    border-color: $black;
+    width: inherit;
+    max-width: 100%;
+}
+
+.alert {
+  border-radius: 0;
+
+  &.alert-success {
+    background: #000000de;
+    color: $white;
+    border: $black;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+
+    a {
+      font-weight: bold;
+      color: $white;
+    }
+  }
+}
+
+#block-webform {
+  .webform-element-description {
+    margin-bottom: 100px;
+  }
+
+  .js-form-item-image {
+    width: 150px;
+  }
+
+  input[data-drupal-selector="edit-image-remove-button"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Hamburger menu.
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray .2s, stroke-dashoffset .2s;
+  stroke:#000;
+  stroke-width:5.5;
+  stroke-linecap:round;
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+}

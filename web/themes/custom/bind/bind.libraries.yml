@@ -1,0 +1,20 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+bindery:
+  js:
+    js/bindery.min.js: { minified: TRUE }
+
+global-scripts:
+  js:
+    js/script.js: {}
+  dependencies:
+    - bind/bindery
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.debounce
+    - core/collapse

@@ -1,0 +1,44 @@
+// Override bootstrap framework variables.
+// Full list of variables in [path to themes/contrib]/bootstrap4/dist/bootstrap/4.4.1/scss/_variables.scss
+// or [path to themes/contrib]/bootstrap4/scss/_theme_variables.scss.
+// Bootstrap variables
+
+// override default bootstrap colors for accessibility
+
+// Greta - Regular.
+@font-face {
+  font-family: 'Greta';
+  src: url("../fonts/GretaArabic-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+// Greta - Bold
+@font-face {
+  font-family: 'Greta';
+  src: url("../fonts/GretaArabic-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+}
+
+$white: #fff !default;
+$black: #000 !default;
+$gray-700: #495057 !default;
+
+$blue: #0056b3 !default;
+$cyan: #006170 !default;
+$pink: #e21181 !default;
+$green: #008a00 !default;
+
+$primary: #000;
+
+$breadcrumb-divider-color: $gray-700 !default;
+$breadcrumb-active-color: $gray-700 !default;
+
+$navbar-light-color: rgba($black, .6) !default;
+$navbar-dark-color: rgba($white, .6) !default;
+
+$form-text-margin-top: 0 !default;
+
+$font-family-base: 'Greta', Times, sans-serif  !default;
