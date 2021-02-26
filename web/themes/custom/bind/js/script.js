@@ -10,7 +10,12 @@
     attach: function attach(context) {
       $(window).on('load', function () {
         if ($(".node--type-books").length && !$(".📖-root").length) {
-          Bindery.makeBook({ content: ".node--type-books" });
+          Bindery.makeBook({ 
+            content: ".node--type-books",
+            pageSetup: {
+              size: { width: '5.8in', height: '8.3in' },
+            },
+          });
         }
       });
     }
