@@ -66,6 +66,7 @@ class BookWebformHandler extends WebformHandlerBase {
         $node->status = TRUE;
       }
       $node->save();
+      $message = "<pYour contribution has been to the publication:" . $node->toLink(). "</p>";
     }
 
     else {
@@ -82,11 +83,11 @@ class BookWebformHandler extends WebformHandlerBase {
         ],
       ];
 
-      $node = Node::create($node_args);
-      $node->save();
+      $new_node = Node::create($node_args);
+      $new_node->save();
+      $message = "<pYour contribution has been to the publication:" . $new_node->toLink(). "</p>";
     }
 
-    $message = "<pYour contribution has been to the publication:" . $node->toLink(). "</p>";
 
     \Drupal::messenger()->addStatus(Markup::create(Xss::filter($message)));
 
